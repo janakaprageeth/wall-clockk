@@ -1,0 +1,37 @@
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+#container {
+  width: 200px;
+  height: 200px;
+}
+
+@keyframes animation {
+  0% {
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 80 10;
+    stroke-dashoffset: -80;
+  }
+  100% {
+    stroke-dasharray: 0 100;
+    stroke-dashoffset: -200;
+  }
+}
+
+#spinner {
+  transform-origin: center;
+  animation-name: animation;
+  animation-duration: 5s; /* Adjust the duration as needed */
+  animation-timing-function: ease-in-out; /* Use ease-in-out for smooth start and end */
+  animation-iteration-count: infinite;
+}
+
+
+
